@@ -1,13 +1,12 @@
 import React from "react";
 
-const TodoItem = ({ todo, input, onToggle, onRemove }) => {
-
+const TodoItem = ({ todo, onToggle, onRemove }) => {
   return (
     <div>
       <input
         type="checkbox"
         readOnly={true}
-        value={input}
+        checked={todo.done}
         onClick={() => onToggle(todo.id)}
       />
       <span
