@@ -1,10 +1,19 @@
 import React from 'react';
 import './App.css';
+import MyComponent from './MyComponent';
+import Counter from './Counter';
+import Say from './Say';
 
 const App = () => {
-  const name = '리액트';
-
-  return <div className="react">{name || 'undefined입니다.'}</div>;
+  return (
+    <div>
+      <MyComponent name="React" favoritNumber={4}>
+        리액트
+      </MyComponent>
+      <Counter />
+      <Say />
+    </div>
+  );
 };
 
 export default App;
